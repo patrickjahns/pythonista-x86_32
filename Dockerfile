@@ -1,14 +1,15 @@
 #######################################################################
 # Dockerfile for building Pythonista docker image.
 #
+# Modified by Patrick Jahns
 # Copyright (c) 2014, Igor Kalnitsky <igor@kalnitsky.org>
 # Licensed under 3-clause BSD
 #
-# See https://github.com/ikalnitsky/pythonista for details.
+# See https://github.com/patrickjahns/pythonista-x86_32 
 #######################################################################
 
-FROM        debian:jessie
-MAINTAINER  Igor Kalnitsky <igor@kalnitsky.org>
+FROM        32bit/ubuntu:14.04
+MAINTAINER  Patrick Jahns <github@patrickjahns.de>
 
 ADD get-python.sh  /var/tmp/get-python.sh
 
