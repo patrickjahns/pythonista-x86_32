@@ -1,12 +1,11 @@
 Pythonista - the Docker image
 =============================
 
-Pythonista is a [Docker] image for real Python developers. That means
-you can find here most popular Python interpreters and tests your
-application in all of them. The idea for image was born when I needed
-to test some code in Python 2.6 environment and my workstation couldn't
-handle it, since Debian Jessie doesn't have Python 2.6 in its repo.
+Pythonista is a [Docker] image for Python developers to test their applications against
+common python interpreters. The image was originaly created by ikalnitsky (see [pythonista]) for 64bit containers.
+Since one of my statging servers is running on 32bit, this fork was created
 
+[pythonista]: https://github.com/ikalnitsky/pythonista
 [Docker]: https://docker.com/
 
 
@@ -14,7 +13,7 @@ About Image
 -----------
 
 * **OS** - Debian Jessie (Testing)
-* **CPython** - 2.6.9 / 2.7.9 / 3.2.6 / 3.3.6 / 3.4.3
+* **CPython** - 2.6.9 / 2.7.9 / 3.2.6 / 3.3.6 / 3.4.4
 * **PyPy** - PyPy 2.5.0 (based on 2.7.8) / PyPy3 2.4.0 (based on 3.2.5)
 * **Env** - pip, virtualenv, tox
 
@@ -25,12 +24,12 @@ How To Use?
 Pythonista image is available on [Docker Hub], so you can easily `pull`
 it by means `docker` client:
 
-    $ [sudo] docker pull ikalnitsky/pythonista
+    $ [sudo] docker pull patrickjahns/pythonista-x86_32
 
 If you want to enter a bash session, just do it how you did it for
 another containers:
 
-    $ [sudo] docker run -t -i ikalnitsky/pythonista bash
+    $ [sudo] docker run -t -i patrickjahns/pythonista-x86_32 bash
 
 and enjoy `bash` session within container.
 
@@ -44,7 +43,7 @@ It's very convenient to run unit tests inside Pythonista container because
 you can run it using different Python interpreters. For example, with [tox]
 the command might look like:
 
-    $ [sudo] docker run -v /path/to/src/:/src -w /src ikalnitsky/pythonista tox
+    $ [sudo] docker run -v /path/to/src/:/src -w /src patrickjahns/pythonista-x86_32 tox
 
 [tox]: https://tox.readthedocs.org/
 
@@ -55,4 +54,5 @@ Feedback
 It's important for me to get user's feedback, so please don't hesitate
 to suggest improvements or report bugs via [GitHub Issue].
 
-[GitHub Issue]: https://github.com/ikalnitsky/pythonista/issues
+[GitHub Issue]: https://github.com/patrickjahns/pythonista-x86_32/issues
+
