@@ -12,7 +12,7 @@ Since one of my statging servers is running on 32bit, this fork was created
 About Image
 -----------
 
-* **OS** - Debian Jessie (Testing)
+* **OS** - Ubuntu Trusty (14.04)
 * **CPython** - 2.6.9 / 2.7.9 / 3.2.6 / 3.3.6 / 3.4.4
 * **PyPy** - PyPy 2.5.0 (based on 2.7.8) / PyPy3 2.4.0 (based on 3.2.5)
 * **Env** - pip, virtualenv, tox
