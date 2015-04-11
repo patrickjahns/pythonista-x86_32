@@ -29,7 +29,7 @@ it by means `docker` client:
 If you want to enter a bash session, just do it how you did it for
 another containers:
 
-    $ [sudo] docker run -t -i patrickjahns/pythonista-x86_32 bash
+    $ [sudo] docker run -t -i patrickjahns/pythonista-x86-32 bash
 
 and enjoy `bash` session within container.
 
@@ -43,7 +43,7 @@ It's very convenient to run unit tests inside Pythonista container because
 you can run it using different Python interpreters. For example, with [tox]
 the command might look like:
 
-    $ [sudo] docker run -v /path/to/src/:/src -w /src patrickjahns/pythonista-x86_32 tox
+    $ [sudo] docker run -v /path/to/src/:/src -w /src patrickjahns/pythonista-x86-32 tox
 
 [tox]: https://tox.readthedocs.org/
 
