@@ -8,7 +8,7 @@
 # See https://github.com/patrickjahns/pythonista-x86_32 
 #######################################################################
 
-FROM        32bit/ubuntu:14.04
+FROM        patrickjahns/ubuntu-debootstrap:14.04
 MAINTAINER  Patrick Jahns <github@patrickjahns.de>
 
 ADD get-python.sh  /var/tmp/get-python.sh
@@ -19,7 +19,7 @@ ADD get-python.sh  /var/tmp/get-python.sh
 #       make more rational defaults for pip and python.
 RUN ["/bin/bash", "/var/tmp/get-python.sh", \
      "2.7.9",             \
-     "3.4.4",             \
+     "3.4.3",             \
      "2.6.9",             \
      "3.2.6",             \
      "3.3.6",             \
@@ -32,7 +32,7 @@ RUN ["/bin/bash", "/var/tmp/get-python.sh", \
 # PATH should be changed dynamically based on some third-party
 # input. But I have no choice... :(
 ENV PATH $PATH:/opt/python/2.7.9/bin
-ENV PATH $PATH:/opt/python/3.4.4/bin
+ENV PATH $PATH:/opt/python/3.4.3/bin
 ENV PATH $PATH:/opt/python/2.6.9/bin
 ENV PATH $PATH:/opt/python/3.2.6/bin
 ENV PATH $PATH:/opt/python/3.3.6/bin
